@@ -1,0 +1,136 @@
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  .page-map { display: flex; gap: 24px; align-items: flex-start; flex-wrap: wrap; }
+  .page-col { flex: 1; min-width: 260px; }
+  .section-block {
+    border-left: 3px solid #c17f4a;
+    margin-bottom: 8px;
+    padding: 10px 14px;
+    background: #faf6ef;
+    border-radius: 0 6px 6px 0;
+  }
+  .section-block.accent { border-left-color: #d4452a; background: #fdf3ee; }
+  .section-block.dark { border-left-color: #3d2e22; background: #f3ede4; }
+  .section-num { font-family:'Jost',sans-serif; font-size:9px; letter-spacing:3px; color:#9b7c5a; text-transform:uppercase; margin-bottom:3px; }
+  .section-name { font-family:'Cormorant Garamond',serif; font-size:17px; color:#2c1810; font-style:italic; }
+  .section-desc { font-family:'Jost',sans-serif; font-size:10px; color:#7a6050; margin-top:4px; line-height:1.5; font-weight:300; }
+  .tech-tag { display:inline-block; background:#e8ddd0; color:#6b5240; font-size:8px; letter-spacing:1px; padding:2px 6px; border-radius:3px; margin-top:5px; font-family:'Jost',sans-serif; }
+  .tech-tag.blue { background:#e0eaf5; color:#3a6090; }
+  .tech-tag.green { background:#e0f0e8; color:#2d6b47; }
+  .arrow { text-align:center; color:#c17f4a; font-size:12px; margin:2px 0; }
+</style>
+
+<h2>Struktura strony — Cukiernia Klysek</h2>
+<p class="subtitle">Pełna mapa sekcji z podejściem technicznym (C)</p>
+
+<div class="page-map">
+  <div class="page-col">
+
+    <div class="section-block accent">
+      <div class="section-num">00 · stały element</div>
+      <div class="section-name">Navbar</div>
+      <div class="section-desc">Przezroczysty → po scrollu nabiera tła kremowego z cieniem. Logo Klysek po lewej, menu po prawej. Sticky, z=50.</div>
+      <span class="tech-tag">CSS scroll listener</span>
+      <span class="tech-tag green">poza Hero — brak re-renderów</span>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block accent">
+      <div class="section-num">01 · h-screen</div>
+      <div class="section-name">Hero — Slideshow</div>
+      <div class="section-desc">Pełnoekranowy pokaz slajdów. Ken Burns CSS, cross-fade 5s, ciemna nakładka. Logo + tagline na środku. Oddzielny komponent — zero re-renderów navbar.</div>
+      <span class="tech-tag">CSS @keyframes kenburns</span>
+      <span class="tech-tag blue">isolated component</span>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block">
+      <div class="section-num">02</div>
+      <div class="section-name">Opis cukierni</div>
+      <div class="section-desc">Krótki cytat lub intro (2–3 zdania) + 2–3 zdjęcia w układzie asymetrycznym. Intro do historii i charakteru miejsca.</div>
+      <span class="tech-tag green">Framer whileInView</span>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block">
+      <div class="section-num">03</div>
+      <div class="section-name">Bestsellery</div>
+      <div class="section-desc">4–6 kart produktów ze zdjęciem, nazwą i krótkim opisem. Hover z subtelnym uniesieniem.</div>
+      <span class="tech-tag green">Framer whileInView stagger</span>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block dark">
+      <div class="section-num">04</div>
+      <div class="section-name">O nas</div>
+      <div class="section-desc">Naprzemienne bloki: tekst lewo + zdjęcie prawo, potem zdjęcie lewo + tekst prawo. 3–4 bloki. Animacje wjeżdżania z boku.</div>
+      <span class="tech-tag green">Framer slide-in left/right</span>
+    </div>
+
+  </div>
+
+  <div class="page-col">
+
+    <div class="section-block">
+      <div class="section-num">05</div>
+      <div class="section-name">Oferta</div>
+      <div class="section-desc">5 kategorii: Torty · Ciasta · Ciastka · Pączki · Desery. Zakładki (tabs) lub siatka kart z ikoną kategorii i opisem.</div>
+      <span class="tech-tag green">Framer whileInView</span>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block">
+      <div class="section-num">06</div>
+      <div class="section-name">Wnętrze</div>
+      <div class="section-desc">4-kafelkowa siatka zdjęć (2×2 lub 1 duże + 3 małe). Hover overlay z subtelnym przyciemnieniem.</div>
+      <span class="tech-tag green">Framer whileInView</span>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block dark">
+      <div class="section-num">07 · stopka</div>
+      <div class="section-name">Footer</div>
+      <div class="section-desc">4 kolumny: Logo + tagline · Godziny otwarcia · Dane kontaktowe · Mapa (Google Maps embed). Ciemne tło, kremowy tekst.</div>
+      <span class="tech-tag">static</span>
+    </div>
+
+    <div style="margin-top:20px;padding:14px;background:#f3ede4;border-radius:8px;border:1px solid #ddd3c5;">
+      <div style="font-family:'Jost',sans-serif;font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#9b7c5a;margin-bottom:8px;">Paleta kolorów</div>
+      <div style="display:flex;gap:8px;flex-wrap:wrap;">
+        <div style="text-align:center;">
+          <div style="width:36px;height:36px;border-radius:6px;background:#faf6ef;border:1px solid #e0d4c0;margin-bottom:3px;"></div>
+          <div style="font-size:8px;color:#9b7c5a;font-family:monospace;">faf6ef</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:36px;height:36px;border-radius:6px;background:#2c1810;margin-bottom:3px;"></div>
+          <div style="font-size:8px;color:#9b7c5a;font-family:monospace;">2c1810</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:36px;height:36px;border-radius:6px;background:#c17f4a;margin-bottom:3px;"></div>
+          <div style="font-size:8px;color:#9b7c5a;font-family:monospace;">c17f4a</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:36px;height:36px;border-radius:6px;background:#d4452a;margin-bottom:3px;"></div>
+          <div style="font-size:8px;color:#9b7c5a;font-family:monospace;">d4452a</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:36px;height:36px;border-radius:6px;background:#9b7c5a;margin-bottom:3px;"></div>
+          <div style="font-size:8px;color:#9b7c5a;font-family:monospace;">9b7c5a</div>
+        </div>
+        <div style="text-align:center;">
+          <div style="width:36px;height:36px;border-radius:6px;background:#f5e6d3;border:1px solid #e0d4c0;margin-bottom:3px;"></div>
+          <div style="font-size:8px;color:#9b7c5a;font-family:monospace;">f5e6d3</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:20px;font-size:12px;">Czy ta struktura i kolejność sekcji wygląda dobrze? Napisz w terminalu jeśli chcesz coś zmienić.</p>

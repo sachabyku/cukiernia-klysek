@@ -1,0 +1,55 @@
+/* src/app/globals.css */
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
+@theme {
+  --color-cream: #faf6ef;
+  --color-cream-dark: #f5e6d3;
+  --color-brown-dark: #2c1810;
+  --color-brown-mid: #6b5240;
+  --color-brown-light: #9b7c5a;
+  --color-gold: #c17f4a;
+  --color-red-accent: #d4452a;
+  --color-brown-border: #e8ddd0;
+
+  --font-serif: var(--font-cormorant), Georgia, serif;
+  --font-sans: var(--font-jost), system-ui, sans-serif;
+
+  --animate-ken-1: slide-ken 20s ease-in-out infinite 0s;
+  --animate-ken-2: slide-ken 20s ease-in-out infinite 5s;
+  --animate-ken-3: slide-ken 20s ease-in-out infinite 10s;
+  --animate-ken-4: slide-ken 20s ease-in-out infinite 15s;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #faf6ef;
+    color: #2c1810;
+  }
+}
+
+@keyframes slide-ken {
+  0%   { opacity: 0; transform: scale(1.0); }
+  5%   { opacity: 1; transform: scale(1.0); }
+  25%  { opacity: 1; transform: scale(1.08); }
+  30%  { opacity: 0; transform: scale(1.08); }
+  100% { opacity: 0; transform: scale(1.08); }
+}
+
+@keyframes dot-active {
+  0%    { background-color: #c17f4a; width: 20px; border-radius: 3px; }
+  24%   { background-color: #c17f4a; width: 20px; border-radius: 3px; }
+  26%   { background-color: rgba(255, 255, 255, 0.3); width: 6px; border-radius: 9999px; }
+  100%  { background-color: rgba(255, 255, 255, 0.3); width: 6px; border-radius: 9999px; }
+}
+
+.dot-indicator {
+  height: 6px;
+  width: 6px;
+  border-radius: 9999px;
+  background-color: rgba(255, 255, 255, 0.3);
+  animation: dot-active 20s ease-in-out infinite;
+}

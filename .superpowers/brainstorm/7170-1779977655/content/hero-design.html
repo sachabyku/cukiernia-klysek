@@ -1,0 +1,174 @@
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  @keyframes kenburns-demo {
+    0%   { transform: scale(1.0); }
+    100% { transform: scale(1.08); }
+  }
+  @keyframes fadein { from { opacity:0; } to { opacity:1; } }
+
+  .hero-mock {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #1a0f08;
+    margin-bottom: 24px;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: url('https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=1200&q=70') center/cover;
+    animation: kenburns-demo 8s ease-out infinite alternate;
+    transform-origin: center center;
+  }
+  .hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(20,10,5,0.55) 0%, rgba(20,10,5,0.45) 60%, rgba(20,10,5,0.65) 100%);
+  }
+  .hero-navbar {
+    position: absolute; top: 0; left: 0; right: 0;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 22px 40px;
+    z-index: 10;
+  }
+  .hero-logo-wrap { display:flex; align-items:center; }
+  .hero-logo-img {
+    height: 44px;
+    filter: brightness(0) invert(1);
+    opacity: 0.92;
+  }
+  .hero-nav-links { display:flex; gap:28px; align-items:center; }
+  .hero-nav-link {
+    font-family:'Jost',sans-serif; font-weight:300;
+    font-size:11px; letter-spacing:2.5px; text-transform:uppercase;
+    color:rgba(255,255,255,0.8);
+  }
+  .hero-nav-link.active { color:#fff; border-bottom:1px solid #c17f4a; padding-bottom:2px; }
+  .hero-content {
+    position: absolute; inset: 0;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+    z-index: 10;
+    animation: fadein 1s ease-out;
+  }
+  .hero-eyebrow {
+    font-family:'Jost',sans-serif; font-weight:300;
+    font-size:10px; letter-spacing:5px; text-transform:uppercase;
+    color:#c17f4a; margin-bottom:16px;
+  }
+  .hero-title {
+    font-family:'Cormorant Garamond',serif;
+    font-size:58px; font-style:italic; font-weight:400;
+    color:#fff; line-height:1.15;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  }
+  .hero-divider {
+    width: 50px; height: 1px;
+    background: linear-gradient(to right, transparent, #c17f4a, transparent);
+    margin: 20px auto;
+  }
+  .hero-sub {
+    font-family:'Jost',sans-serif; font-weight:300;
+    font-size:12px; letter-spacing:3px; text-transform:uppercase;
+    color:rgba(255,255,255,0.65);
+  }
+  .hero-cta {
+    margin-top: 32px;
+    display: inline-block;
+    border: 1px solid rgba(193,127,74,0.7);
+    color: #fff;
+    font-family:'Jost',sans-serif; font-weight:300;
+    font-size:10px; letter-spacing:3px; text-transform:uppercase;
+    padding: 12px 28px;
+    transition: all 0.3s;
+  }
+  .hero-dots {
+    position: absolute; bottom: 28px; left:50%; transform:translateX(-50%);
+    display:flex; gap:8px; z-index:10;
+  }
+  .dot { width:6px; height:6px; border-radius:50%; background:rgba(255,255,255,0.35); }
+  .dot.active { background:#c17f4a; width:20px; border-radius:3px; }
+  .hero-scroll {
+    position:absolute; bottom:28px; right:40px; z-index:10;
+    display:flex; flex-direction:column; align-items:center; gap:6px;
+  }
+  .scroll-line { width:1px; height:40px; background:linear-gradient(to bottom, #c17f4a, transparent); }
+  .scroll-text { font-family:'Jost',sans-serif; font-size:8px; letter-spacing:3px; color:rgba(255,255,255,0.5); text-transform:uppercase; writing-mode:vertical-rl; }
+
+  .spec-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:8px; }
+  .spec-item { background:#faf6ef; border-radius:8px; padding:14px; border:1px solid #e8ddd0; }
+  .spec-label { font-family:'Jost',sans-serif; font-size:9px; letter-spacing:2px; text-transform:uppercase; color:#9b7c5a; margin-bottom:6px; }
+  .spec-value { font-family:'Cormorant Garamond',serif; font-size:15px; color:#2c1810; }
+  .spec-note { font-family:'Jost',sans-serif; font-size:10px; color:#7a6050; margin-top:4px; font-weight:300; line-height:1.5; }
+</style>
+
+<h2>Sekcja Hero — projekt szczegółowy</h2>
+<p class="subtitle">Ken Burns · Cross-fade slideshow · Statyczny navbar + content</p>
+
+<div class="hero-mock">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+
+  <!-- Navbar -->
+  <div class="hero-navbar">
+    <div class="hero-logo-wrap">
+      <div style="font-family:'Cormorant Garamond',serif;font-size:11px;letter-spacing:3px;color:rgba(255,255,255,0.9);font-style:italic;">✦ CUKIERNIA KLYSEK</div>
+    </div>
+    <div class="hero-nav-links">
+      <span class="hero-nav-link active">Strona główna</span>
+      <span class="hero-nav-link">O nas</span>
+      <span class="hero-nav-link">Oferta</span>
+      <span class="hero-nav-link">Wnętrze</span>
+      <span class="hero-nav-link">Kontakt</span>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="hero-content">
+    <div class="hero-eyebrow">Cukiernia Klysek · od 1985</div>
+    <div class="hero-title">Z miłości do<br>dobrego smaku</div>
+    <div class="hero-divider"></div>
+    <div class="hero-sub">Tradycyjne wypieki · Autorskie torty · Sezonowe desery</div>
+    <div class="hero-cta">Poznaj naszą ofertę</div>
+  </div>
+
+  <!-- Dots -->
+  <div class="hero-dots">
+    <div class="dot active"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="hero-scroll">
+    <div class="scroll-text">scroll</div>
+    <div class="scroll-line"></div>
+  </div>
+</div>
+
+<div class="spec-grid">
+  <div class="spec-item">
+    <div class="spec-label">Slideshow</div>
+    <div class="spec-value">4 zdjęcia · 5s · cross-fade</div>
+    <div class="spec-note">Każde zdjęcie ma własną instancję animacji CSS — reset zoomu przy każdym slajdzie.</div>
+  </div>
+  <div class="spec-item">
+    <div class="spec-label">Ken Burns</div>
+    <div class="spec-value">scale 100% → 108%</div>
+    <div class="spec-note">CSS @keyframes, transform-origin: center. GPU-accelerated — nie obciąża CPU na mobile.</div>
+  </div>
+  <div class="spec-item">
+    <div class="spec-label">Navbar po scrollu</div>
+    <div class="spec-value">transparent → bg-[#faf6ef]/95</div>
+    <div class="spec-note">backdrop-blur + shadow po przekroczeniu 50px scroll. Płynna CSS transition.</div>
+  </div>
+  <div class="spec-item">
+    <div class="spec-label">Izolacja komponentu</div>
+    <div class="spec-value">HeroSlideshow + HeroContent</div>
+    <div class="spec-note">Dwa osobne komponenty. Stan slajdów nie powoduje re-renderu navbar ani reszty strony.</div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:20px;font-size:12px;">Powyżej: animowany podgląd Ken Burns. Czy ten design sekcji Hero wygląda tak jak sobie wyobrażałeś?</p>

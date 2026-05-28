@@ -1,0 +1,5 @@
+{"type":"server-started","port":54887,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:54887","screen_dir":"/Users/macbook/Desktop/klysek/klysek/.superpowers/brainstorm/7486-1779981117/content","state_dir":"/Users/macbook/Desktop/klysek/klysek/.superpowers/brainstorm/7486-1779981117/state"}
+{"type":"screen-added","file":"/Users/macbook/Desktop/klysek/klysek/.superpowers/brainstorm/7486-1779981117/content/hero-design.html"}
+{"type":"screen-added","file":"/Users/macbook/Desktop/klysek/klysek/.superpowers/brainstorm/7486-1779981117/content/hero-design-v2.html"}
+{"type":"screen-added","file":"/Users/macbook/Desktop/klysek/klysek/.superpowers/brainstorm/7486-1779981117/content/sections-design.html"}
+{"type":"server-stopped","reason":"idle timeout"}

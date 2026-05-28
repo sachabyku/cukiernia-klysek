@@ -1,0 +1,236 @@
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { background: #f5f0e8; }
+
+  .section-preview {
+    background: #fff;
+    border: 1px solid #e8ddd0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+  }
+  .section-label {
+    background: #2c1810;
+    color: #c17f4a;
+    font-family:'Jost',sans-serif;
+    font-size:9px; letter-spacing:3px; text-transform:uppercase;
+    padding:8px 16px;
+  }
+  .section-body { padding: 24px; background: #faf6ef; }
+
+  /* Shared */
+  .eyebrow { font-family:'Jost',sans-serif; font-weight:300; font-size:9px; letter-spacing:4px; text-transform:uppercase; color:#c17f4a; margin-bottom:8px; }
+  .heading { font-family:'Cormorant Garamond',serif; font-style:italic; font-size:28px; color:#2c1810; margin-bottom:6px; }
+  .divider { width:40px; height:1px; background:#c17f4a; margin:10px 0; }
+  .body-text { font-family:'Jost',sans-serif; font-weight:300; font-size:11px; color:#6b5240; line-height:1.8; }
+
+  /* Sekcja 02 – Opis */
+  .desc-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:center; }
+  .desc-photos { display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto; gap:8px; }
+  .photo-placeholder { background:#ddd3c5; border-radius:6px; }
+  .photo-lg { height:120px; grid-column:1 / -1; }
+  .photo-sm { height:80px; }
+
+  /* Sekcja 03 – Bestsellery */
+  .cards-row { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  .product-card { background:#fff; border-radius:8px; overflow:hidden; border:1px solid #e8ddd0; }
+  .product-img { height:80px; background:#ddd3c5; }
+  .product-body { padding:10px 12px; }
+  .product-name { font-family:'Cormorant Garamond',serif; font-size:14px; color:#2c1810; font-style:italic; }
+  .product-desc { font-family:'Jost',sans-serif; font-size:9px; color:#9b7c5a; margin-top:3px; font-weight:300; line-height:1.5; }
+  .product-tag { display:inline-block; margin-top:6px; font-family:'Jost',sans-serif; font-size:8px; letter-spacing:1px; color:#c17f4a; border-bottom:1px solid #c17f4a; text-transform:uppercase; }
+
+  /* Sekcja 04 – O nas */
+  .about-block { display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:center; margin-bottom:16px; }
+  .about-block.reverse { direction:rtl; }
+  .about-block.reverse > * { direction:ltr; }
+  .about-photo { height:120px; background:#ddd3c5; border-radius:8px; }
+  .about-text-wrap { padding:8px 0; }
+  .about-arrow { font-family:'Jost',sans-serif; font-size:9px; letter-spacing:2px; color:#c17f4a; text-transform:uppercase; margin-top:10px; }
+
+  /* Sekcja 05 – Oferta */
+  .offer-tabs { display:flex; gap:0; border-bottom:1px solid #e8ddd0; margin-bottom:16px; }
+  .offer-tab { font-family:'Jost',sans-serif; font-size:9px; letter-spacing:2px; text-transform:uppercase; padding:8px 14px; color:#9b7c5a; cursor:pointer; }
+  .offer-tab.active { color:#2c1810; border-bottom:2px solid #d4452a; margin-bottom:-1px; }
+  .offer-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+  .offer-item { background:#fff; border-radius:6px; padding:12px; border:1px solid #e8ddd0; display:flex; gap:10px; align-items:center; }
+  .offer-icon { width:36px; height:36px; background:#f5e6d3; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:16px; }
+  .offer-name { font-family:'Cormorant Garamond',serif; font-size:13px; color:#2c1810; font-style:italic; }
+  .offer-sub { font-family:'Jost',sans-serif; font-size:9px; color:#9b7c5a; font-weight:300; margin-top:2px; }
+
+  /* Sekcja 06 – Wnętrze */
+  .interior-grid { display:grid; grid-template-columns:2fr 1fr; grid-template-rows:1fr 1fr; gap:8px; height:160px; }
+  .interior-tile { background:#ddd3c5; border-radius:6px; overflow:hidden; position:relative; }
+  .interior-tile.big { grid-row:1 / -1; }
+  .interior-overlay { position:absolute; inset:0; background:rgba(44,24,16,0); transition:background 0.3s; display:flex; align-items:center; justify-content:center; }
+  .interior-label { font-family:'Jost',sans-serif; font-size:8px; letter-spacing:2px; text-transform:uppercase; color:transparent; }
+
+  /* Sekcja 07 – Footer */
+  .footer-mock { background:#2c1810; border-radius:8px; padding:20px; display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+  .footer-col-title { font-family:'Jost',sans-serif; font-size:8px; letter-spacing:3px; text-transform:uppercase; color:#c17f4a; margin-bottom:8px; }
+  .footer-col-text { font-family:'Jost',sans-serif; font-size:10px; color:rgba(255,255,255,0.6); font-weight:300; line-height:1.9; }
+  .footer-logo-area { font-family:'Cormorant Garamond',serif; font-size:18px; font-style:italic; color:#fff; margin-bottom:6px; }
+  .footer-map { background:#3d2e22; border-radius:4px; height:60px; display:flex; align-items:center; justify-content:center; }
+  .footer-map-label { font-family:'Jost',sans-serif; font-size:8px; letter-spacing:2px; color:#9b7c5a; text-transform:uppercase; }
+</style>
+
+<h2>Projekt sekcji — przegląd</h2>
+<p class="subtitle">Sekcje 02–07 z paletą Warm Cream · Cormorant Garamond + Jost</p>
+
+<!-- 02 Opis -->
+<div class="section-preview">
+  <div class="section-label">02 · Opis cukierni</div>
+  <div class="section-body">
+    <div class="desc-grid">
+      <div>
+        <div class="eyebrow">Nasza historia</div>
+        <div class="heading">Słodka pasja<br>od pokoleń</div>
+        <div class="divider"></div>
+        <div class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cukiernia Klysek to miejsce, gdzie tradycja spotyka się z pasją do dobrego smaku. Od 1985 roku tworzymy wypieki z najlepszych składników.</div>
+      </div>
+      <div class="desc-photos">
+        <div class="photo-placeholder photo-lg"></div>
+        <div class="photo-placeholder photo-sm"></div>
+        <div class="photo-placeholder photo-sm"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 03 Bestsellery -->
+<div class="section-preview">
+  <div class="section-label">03 · Bestsellery</div>
+  <div class="section-body">
+    <div style="text-align:center;margin-bottom:16px;">
+      <div class="eyebrow">Polecane przez klientów</div>
+      <div class="heading">Nasze bestsellery</div>
+    </div>
+    <div class="cards-row">
+      <div class="product-card">
+        <div class="product-img"></div>
+        <div class="product-body">
+          <div class="product-name">Tort weselny</div>
+          <div class="product-desc">Wielopiętrowy, dekorowany ręcznie</div>
+          <div class="product-tag">Zamów →</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img"></div>
+        <div class="product-body">
+          <div class="product-name">Sernik wiedeński</div>
+          <div class="product-desc">Kremowy, na kruchym spodzie</div>
+          <div class="product-tag">Zamów →</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img"></div>
+        <div class="product-body">
+          <div class="product-name">Pączki krakowskie</div>
+          <div class="product-desc">Z różą i lukrem, smażone codziennie</div>
+          <div class="product-tag">Zamów →</div>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-img"></div>
+        <div class="product-body">
+          <div class="product-name">Éclair czekoladowy</div>
+          <div class="product-desc">Choux z kremem patissière</div>
+          <div class="product-tag">Zamów →</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 04 O nas -->
+<div class="section-preview">
+  <div class="section-label">04 · O nas — naprzemienne bloki</div>
+  <div class="section-body">
+    <div class="about-block">
+      <div class="about-photo"></div>
+      <div class="about-text-wrap">
+        <div class="eyebrow">Rzemiosło</div>
+        <div class="heading">Pieczemy z miłością każdego dnia</div>
+        <div class="divider"></div>
+        <div class="body-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Każdy wypiek powstaje z najwyższej jakości składników.</div>
+        <div class="about-arrow">Dowiedz się więcej →</div>
+      </div>
+    </div>
+    <div class="about-block reverse">
+      <div class="about-photo"></div>
+      <div class="about-text-wrap">
+        <div class="eyebrow">Tradycja</div>
+        <div class="heading">Przepisy przekazywane z pokolenia na pokolenie</div>
+        <div class="divider"></div>
+        <div class="body-text">Lorem ipsum dolor sit amet. Nasze receptury mają ponad 40 lat historii i są niezmiennie doskonałe.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 05 Oferta -->
+<div class="section-preview">
+  <div class="section-label">05 · Oferta — zakładki kategorii</div>
+  <div class="section-body">
+    <div style="text-align:center;margin-bottom:16px;">
+      <div class="eyebrow">Co oferujemy</div>
+      <div class="heading">Nasza oferta</div>
+    </div>
+    <div class="offer-tabs">
+      <div class="offer-tab active">Torty</div>
+      <div class="offer-tab">Ciasta</div>
+      <div class="offer-tab">Ciastka</div>
+      <div class="offer-tab">Pączki</div>
+      <div class="offer-tab">Desery</div>
+    </div>
+    <div class="offer-grid">
+      <div class="offer-item"><div class="offer-icon">🎂</div><div><div class="offer-name">Tort weselny</div><div class="offer-sub">od 2 do 8 pięter</div></div></div>
+      <div class="offer-item"><div class="offer-icon">🎂</div><div><div class="offer-name">Tort urodzinowy</div><div class="offer-sub">dowolna dekoracja</div></div></div>
+      <div class="offer-item"><div class="offer-icon">🎂</div><div><div class="offer-name">Tort artystyczny</div><div class="offer-sub">projekt na zamówienie</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 06 Wnętrze -->
+<div class="section-preview">
+  <div class="section-label">06 · Wnętrze — siatka 4 zdjęć</div>
+  <div class="section-body">
+    <div style="text-align:center;margin-bottom:16px;">
+      <div class="eyebrow">Zapraszamy</div>
+      <div class="heading">Nasze wnętrze</div>
+    </div>
+    <div class="interior-grid">
+      <div class="interior-tile big"><div class="interior-overlay"><span class="interior-label">Sala główna</span></div></div>
+      <div class="interior-tile"><div class="interior-overlay"></div></div>
+      <div class="interior-tile"><div class="interior-overlay"></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- 07 Footer -->
+<div class="section-preview">
+  <div class="section-label">07 · Stopka</div>
+  <div class="section-body" style="background:#2c1810;padding:0;">
+    <div class="footer-mock">
+      <div>
+        <div class="footer-logo-area">Cukiernia Klysek</div>
+        <div class="footer-col-text" style="font-size:9px;color:rgba(255,255,255,0.4);">Z miłości do dobrego smaku</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Godziny otwarcia</div>
+        <div class="footer-col-text">Pon–Pt: 8:00–19:00<br>Sobota: 8:00–17:00<br>Niedziela: 9:00–14:00</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Kontakt</div>
+        <div class="footer-col-text">ul. Przykładowa 12<br>Kraków, 30-001<br>tel. 12 345 67 89<br>kontakt@klysek.pl</div>
+      </div>
+      <div>
+        <div class="footer-col-title">Lokalizacja</div>
+        <div class="footer-map"><span class="footer-map-label">Google Maps embed</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle" style="margin-top:8px;font-size:12px;">Czy wszystkie sekcje wyglądają dobrze? Napisz jeśli chcesz coś zmienić w którejkolwiek z nich.</p>
