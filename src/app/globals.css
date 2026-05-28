@@ -15,10 +15,10 @@
   --font-serif: var(--font-cormorant), Georgia, serif;
   --font-sans: var(--font-jost), system-ui, sans-serif;
 
-  --animate-ken-1: slide-ken 20s ease-in-out infinite 0s;
-  --animate-ken-2: slide-ken 20s ease-in-out infinite 5s;
-  --animate-ken-3: slide-ken 20s ease-in-out infinite 10s;
-  --animate-ken-4: slide-ken 20s ease-in-out infinite 15s;
+  --animate-ken-1: slide-ken-1 20s ease-in-out infinite;
+  --animate-ken-2: slide-ken-2 20s ease-in-out infinite;
+  --animate-ken-3: slide-ken-3 20s ease-in-out infinite;
+  --animate-ken-4: slide-ken-4 20s ease-in-out infinite;
 }
 
 @layer base {
@@ -31,11 +31,37 @@
   }
 }
 
-@keyframes slide-ken {
+@keyframes slide-ken-1 {
+  0%   { opacity: 1; transform: scale(1.0); }
+  20%  { opacity: 1; transform: scale(1.08); }
+  25%  { opacity: 0; transform: scale(1.08); }
+  95%  { opacity: 0; transform: scale(1.0); }
+  100% { opacity: 1; transform: scale(1.0); }
+}
+
+@keyframes slide-ken-2 {
   0%   { opacity: 0; transform: scale(1.0); }
-  5%   { opacity: 1; transform: scale(1.0); }
-  25%  { opacity: 1; transform: scale(1.08); }
-  30%  { opacity: 0; transform: scale(1.08); }
+  20%  { opacity: 0; transform: scale(1.0); }
+  25%  { opacity: 1; transform: scale(1.0); }
+  45%  { opacity: 1; transform: scale(1.08); }
+  50%  { opacity: 0; transform: scale(1.08); }
+  100% { opacity: 0; transform: scale(1.08); }
+}
+
+@keyframes slide-ken-3 {
+  0%   { opacity: 0; transform: scale(1.0); }
+  45%  { opacity: 0; transform: scale(1.0); }
+  50%  { opacity: 1; transform: scale(1.0); }
+  70%  { opacity: 1; transform: scale(1.08); }
+  75%  { opacity: 0; transform: scale(1.08); }
+  100% { opacity: 0; transform: scale(1.08); }
+}
+
+@keyframes slide-ken-4 {
+  0%   { opacity: 0; transform: scale(1.0); }
+  70%  { opacity: 0; transform: scale(1.0); }
+  75%  { opacity: 1; transform: scale(1.0); }
+  95%  { opacity: 1; transform: scale(1.08); }
   100% { opacity: 0; transform: scale(1.08); }
 }
 
