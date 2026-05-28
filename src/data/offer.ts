@@ -15,7 +15,7 @@ export const offerCategories: OfferCategory[] = [
     examples: 'Tort weselny · Tort urodzinowy · Tort okolicznościowy · Tort komunijny',
     photos: [
       '/images/torty/3.jpg',
-      '/images/torty/PHOTO-2026-05-22-11-18-24 4.jpg',
+      '/images/torty/tort okolicznosciowy.jpg',
       '/images/torty/PHOTO-2026-05-22-11-18-24 5.jpg',
       '/images/torty/PHOTO-2026-05-22-11-18-26 6.jpg',
       '/images/torty/PHOTO-2026-05-22-11-18-26 7.jpg',
