@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const slides = [
   '/images/hero/hero-1.jpg',
   '/images/hero/hero-2.jpg',
@@ -18,12 +20,20 @@ export default function HeroSlideshow() {
       {slides.map((src, i) => (
         <div
           key={src}
-          className={`absolute inset-0 bg-cover bg-center ${animationClasses[i]}`}
-          style={{
-            backgroundImage: `url('${src}')`,
-            willChange: 'transform, opacity',
-          }}
-        />
+          className={`absolute inset-0 ${animationClasses[i]}`}
+          style={{ willChange: 'transform, opacity' }}
+        >
+          <Image
+            src={src}
+            alt=""
+            fill
+            priority={i === 0}
+            loading={i === 0 ? 'eager' : 'lazy'}
+            quality={80}
+            sizes="100vw"
+            className="object-cover"
+          />
+        </div>
       ))}
     </div>
   )
