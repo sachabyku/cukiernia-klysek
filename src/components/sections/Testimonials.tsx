@@ -29,7 +29,7 @@ export default function Testimonials() {
               transition={{ duration: 0.6, delay: i * 0.12 }}
               className="bg-cream rounded-sm border border-brown-border p-8 flex flex-col"
             >
-              <div className="flex gap-1 mb-4" aria-label="Pięć gwiazdek">
+              <div role="img" aria-label="Pięć gwiazdek" className="flex gap-1 mb-4">
                 {[0, 1, 2, 3, 4].map((s) => (
                   <svg key={s} width="14" height="14" viewBox="0 0 24 24" fill="#c17f4a">
                     <path d="M12 .587l3.668 7.431 8.2 1.191-5.934 5.787 1.401 8.168L12 18.897l-7.335 3.867 1.4-8.168L.132 9.209l8.2-1.191z"/>

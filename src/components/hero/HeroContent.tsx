@@ -15,7 +15,7 @@ export default function HeroContent() {
       <div className="w-12 h-px my-5"
            style={{ background: 'linear-gradient(to right, transparent, #c17f4a, transparent)' }} />
 
-      <p className="font-sans font-light text-[11px] tracking-[3px] uppercase text-white/60">
+      <p className="font-sans font-light text-[11px] tracking-[3px] uppercase text-white/85">
         Tradycyjne wypieki · Torty na zamówienie · Codzienne pączki
       </p>
 

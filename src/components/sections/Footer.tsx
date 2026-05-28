@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 export default function Footer() {
   return (
-    <footer id="kontakt" className="bg-brown-dark text-white/60">
+    <footer id="kontakt" className="bg-brown-dark text-white/80">
 
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
 
@@ -14,7 +14,7 @@ export default function Footer() {
             height={42}
             className="h-10 w-auto mb-4"
           />
-          <p className="font-sans font-light text-xs text-white/40 leading-relaxed italic mb-5">
+          <p className="font-sans font-light text-xs text-white/70 leading-relaxed italic mb-5">
             Z miłości do dobrego smaku
           </p>
           <div className="flex gap-4">
@@ -44,18 +44,18 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="font-sans font-light text-[9px] tracking-[3px] uppercase text-gold mb-4">
+          <h3 className="font-sans font-light text-[9px] tracking-[3px] uppercase text-gold mb-4">
             Godziny otwarcia
-          </h4>
+          </h3>
           <ul className="font-sans font-light text-xs leading-8">
             <li>Pon – Nd: <span className="text-white/80">8:00 – 19:00</span></li>
           </ul>
         </div>
 
         <div>
-          <h4 className="font-sans font-light text-[9px] tracking-[3px] uppercase text-gold mb-4">
+          <h3 className="font-sans font-light text-[9px] tracking-[3px] uppercase text-gold mb-4">
             Kontakt
-          </h4>
+          </h3>
           <address className="font-sans font-light text-xs not-italic leading-8">
             <p>ul. Jagiełły 18</p>
             <p>45-920 Opole</p>
@@ -69,11 +69,12 @@ export default function Footer() {
         </div>
 
         <div>
-          <h4 className="font-sans font-light text-[9px] tracking-[3px] uppercase text-gold mb-4">
+          <h3 className="font-sans font-light text-[9px] tracking-[3px] uppercase text-gold mb-4">
             Lokalizacja
-          </h4>
+          </h3>
           <div className="rounded-sm overflow-hidden h-32">
             <iframe
+              title="Mapa lokalizacji Cukierni A. H. Kłysek w Opolu"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2525.6231395533036!2d17.894527793742373!3d50.72693039431705!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471051f9bb8c83f1%3A0x3900ce74409a6c41!2sCukiernia%20A%20%26%20H%20K%C5%82ysek%20Henryk%20i%20Anita%20K%C5%82ysek%20Cukiernia!5e0!3m2!1spl!2spl!4v1779986729727!5m2!1spl!2spl"
               width="100%"
               height="100%"
