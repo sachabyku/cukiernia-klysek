@@ -4,7 +4,7 @@ export default function HeroContent() {
   return (
     <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6">
       <p className="font-sans font-light text-[10px] tracking-[5px] uppercase text-gold mb-4">
-        Cukiernia Klysek · od 1985
+        Cukiernia Klysek · od 1977
       </p>
 
       <h1 className="font-serif italic text-5xl md:text-6xl lg:text-7xl text-white leading-[1.15]"

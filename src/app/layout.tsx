@@ -20,11 +20,11 @@ const jost = Jost({
 export const metadata: Metadata = {
   metadataBase: new URL('https://cukierniaklysek.pl'),
   title: {
-    default: 'Cukiernia A. H. Kłysek Opole — Tradycyjne wypieki od 1985',
+    default: 'Cukiernia A. H. Kłysek Opole — Tradycyjne wypieki od 1977',
     template: '%s | Cukiernia A. H. Kłysek Opole',
   },
   description:
-    'Cukiernia A. H. Kłysek w Opolu od 1985 roku. Tradycyjne ciasta, torty na zamówienie, pączki smażone codziennie. ul. Jagiełły 18, tel. 77 469 10 64.',
+    'Cukiernia A. H. Kłysek w Opolu od 1977 roku. Tradycyjne ciasta, torty na zamówienie, pączki smażone codziennie. ul. Jagiełły 18, tel. 77 469 10 64.',
   keywords: [
     'cukiernia Opole',
     'torty Opole',
@@ -47,9 +47,9 @@ export const metadata: Metadata = {
     locale: 'pl_PL',
     url: 'https://cukierniaklysek.pl',
     siteName: 'Cukiernia A. H. Kłysek Opole',
-    title: 'Cukiernia A. H. Kłysek Opole — Tradycyjne wypieki od 1985',
+    title: 'Cukiernia A. H. Kłysek Opole — Tradycyjne wypieki od 1977',
     description:
-      'Tradycyjne ciasta, torty na zamówienie, pączki smażone codziennie. Cukiernia rodzinna w Opolu od 1985 roku.',
+      'Tradycyjne ciasta, torty na zamówienie, pączki smażone codziennie. Cukiernia rodzinna w Opolu od 1977 roku.',
     images: [
       {
         url: '/images/hero/hero-1.jpg',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cukiernia A. H. Kłysek Opole — Tradycyjne wypieki od 1985',
+    title: 'Cukiernia A. H. Kłysek Opole — Tradycyjne wypieki od 1977',
     description:
       'Tradycyjne ciasta, torty na zamówienie, pączki smażone codziennie. Rodzinna cukiernia w Opolu.',
     images: ['/images/hero/hero-1.jpg'],
@@ -84,14 +84,14 @@ const localBusinessJsonLd = {
   name: 'Cukiernia A. H. Kłysek',
   alternateName: 'Cukiernia Spółka Cywilna Henryk Kłysek Anita Kłysek',
   description:
-    'Tradycyjna cukiernia rodzinna w Opolu od 1985 roku. Ciasta, torty na zamówienie, pączki, desery.',
+    'Tradycyjna cukiernia rodzinna w Opolu od 1977 roku. Ciasta, torty na zamówienie, pączki, desery.',
   image: 'https://cukierniaklysek.pl/images/hero/hero-1.jpg',
   logo: 'https://cukierniaklysek.pl/logo.png',
   url: 'https://cukierniaklysek.pl',
   telephone: '+48774691064',
   email: 'anitakl@poczta.onet.pl',
   priceRange: '$$',
-  foundingDate: '1985',
+  foundingDate: '1977',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'ul. Władysława Jagiełły 18',

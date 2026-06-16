@@ -16,14 +16,14 @@ const blocks: AboutBlock[] = [
   {
     eyebrow: 'Rzemiosło',
     heading: 'Pieczemy z miłością każdego dnia',
-    body: 'Każdy wypiek powstaje z dbałością o szczegóły — od doboru składników po ostateczną dekorację. Pracujemy tak, jak nauczono nas lata temu, łącząc sprawdzone receptury z codziennym rzemiosłem.',
+    body: 'Każdy wypiek powstaje z dbałością o szczegóły, od doboru składników po ostateczną dekorację. Pracujemy tak, jak nauczono nas lata temu, łącząc sprawdzone receptury z codziennym rzemiosłem.',
     image: '/images/o-nas/1562767738_kat01.jpg',
     imageAlt: 'Wypieki Cukierni A. H. Kłysek w Opolu',
   },
   {
     eyebrow: 'Tradycja',
-    heading: 'Rodzinna cukiernia od 1985 roku',
-    body: 'Anita i Henryk Kłysek prowadzą cukiernię od 1985 roku. Ponad cztery dekady doświadczenia, sprawdzone receptury i pasja przekazywana w rodzinie — to fundament każdego naszego wypieku.',
+    heading: 'Rodzinna cukiernia od 1977 roku',
+    body: 'Anita i Henryk Kłysek prowadzą cukiernię od 1977 roku. Prawie pół wieku doświadczenia, sprawdzone receptury i pasja przekazywana w rodzinie to fundament każdego naszego wypieku.',
     image: '/images/o-nas/1562768021_kat10.jpg',
     imageAlt: 'Historia rodzinnej Cukierni Kłysek w Opolu',
   },

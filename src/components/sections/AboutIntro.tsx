@@ -20,11 +20,11 @@ export default function AboutIntro() {
           whileInView="visible"
           viewport={{ once: true, margin: '-80px' }}
         >
-          <SectionHeading eyebrow="Nasza historia" heading="Słodka pasja od 1985 roku" />
+          <SectionHeading eyebrow="Nasza historia" heading="Słodka pasja od 1977 roku" />
           <p className="font-sans font-light text-sm text-brown-mid leading-relaxed mt-6">
             Cukiernia A. H. Kłysek to rodzinne miejsce w sercu Opola, gdzie tradycja
-            spotyka się z pasją do dobrego smaku. Od 1985 roku codziennie pieczemy ciasta,
-            torty i pączki — z dbałością o każdy szczegół.
+            spotyka się z pasją do dobrego smaku. Od 1977 roku codziennie pieczemy ciasta,
+            torty i pączki, z dbałością o każdy szczegół.
           </p>
           <p className="font-sans font-light text-sm text-brown-mid leading-relaxed mt-4">
             Nasze receptury sprawdzają się od ponad czterech dekad. Klienci wracają do nas
